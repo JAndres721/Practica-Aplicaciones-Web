@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Importe</title>
+    <link href="./css/css2.css" rel="Stylesheet" type="text/css" media="screen"/>
+    <script>
+         var opciones=document.getElementsByName("opcion");
+         var puertas=document.getElementsByName("puerta");
+         var pinturas=document.getElementsByName("pintura");
+         var extras=document.getElementsByName("extra");
+         
+
+         function calculo(){
+            var i;
+            var suma=0;
+            
+            for(i=0; i < opciones.length ; i++){
+                if(opciones[i].checked){
+                    suma += parseInt(opciones[i].value);
+                }
+            }
+            for(i=0; i < puertas.length ; i++){
+                if(puertas[i].checked){
+                    suma += parseInt(puertas[i].value);
+                }
+            }
+            for(i=0; i < pinturas.length ; i++){
+                if(pinturas[i].checked){
+                    suma += parseInt(pinturas[i].value);
+                }
+            document.getElementById("total").innerHTML=suma;
+            }
+            for(i=0; i < extras.length ; i++){
+                if(extras[i].checked){
+                    suma += parseInt(extras[i].value);
+                }
+            document.getElementById("total").innerHTML=suma;
+            }
+    }
+    </script>
+</head>
+<body>
+    <h1>Calculadora de Importe</h1>
+
+    <form id="formulario">
+        <div id="primer">
+            Configuración del Coche
+        </div>
+        <div id="segundo">
+            Tipo de Motor<br>
+            <input type="radio" id="gasolina" name="opcion" value="12000">Gasolina
+            <input type="radio" id="diesel" name="opcion" value="13500">Diesel(+1500€)
+            <input type="radio" id="hibrido"  name="opcion" value="15000">Híbrido(+3000€)
+        </div>
+        <div id="tercero">
+            Tipo de Puertas<br>
+            <input type="radio" id="3puer" name="puerta" value="-2000">3 Puertas(-2000€)(Solo con Gasolina)
+            <input type="radio" id="5puer" name="puerta" value="0">5 Puertas
+            <input type="radio" id="familiar" name="puerta" value="1500">Familiar(+1500€)
+        </div>
+        <div id="cuarto">
+            Tipo de Pintura<br>
+            <input type="radio" id="rojo" name="pintura" value="0">Rojo
+            <input type="radio" id="verde" name="pintura" value="0">Verde
+            <input type="radio" id="naranja" name="pintura" value="0">Naranja
+            <input type="radio" id="blanco" name="pintura" value="-500">Blanco(-500€)
+            <input type="radio" id="negro" name="pintura" value="-600">Negro(-600€)
+        </div>
+        <div id="quinto">
+            Seleccionar las que se deseen:<br>
+            <input type="checkbox" name="extra" id="metalizada" value="750">Metalizada(+750€)(Solo Rojo, Verde o Naranja)<br>
+            <input type="checkbox" name="extra" id="llantas" value="200">Llantas(+200€)<br>
+            <input type="checkbox" name="extra" id="clima" value="800">Climatizador(+800€)<br>
+            <input type="checkbox" name="extra" id="gps" value="340">GPS(+340€)<br>
+            <input type="checkbox" name="extra" id="dvd" value="800">DVD(+800€)(Solo modelo familiar)<br>
+        </div>
+        <div id="sexto">
+            Total a Cobrar<br>
+            <input type="button" value="Calcular" onclick="calculo()"><span id="total"></span>
+        </div>
+    </form>
+    </script>
+</body>
+</html>

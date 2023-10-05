@@ -1,0 +1,49 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#tit{
+    background-color: rgb(238, 134, 49);
+    color:blue;
+    font-size: 1.8em;
+    padding: 0.1em;
+    clear: both;
+}
+#cuadro{
+    border:black 0.3em solid;
+    background-color: yellow;
+    height: 7em;
+    text-align: center;
+    margin-top: 0.5em;
+}
+#cuadro1{
+    float: left;
+    margin-top: 0.2em;
+
+}
+#cuadro2{
+    float:left;
+    border:0em blue solid;
+    margin-left: 0.3em;
+    margin-top: 0.2em;
+
+}
+#cuadro3{
+    border:0em red solid;
+    width: 22.5em;
+    float: left;
+    margin-top: 5.4em;
+  }
+p{
+    margin: 0.0em;
+    padding-top: 0.17em;
+    font-weight: bolder;
+}
+input{
+    padding-left: 0em;
+}
+select{
+    width: 13.1em;
+}
+a{
+    font-size: 2em;
+}

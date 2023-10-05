@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+    <link href="./css/css4.css" rel="Stylesheet" type="text/css" media="screen"/>
+    <script>
+    function campos() {
+            var formulario = document.getElementById("formulario");
+            var campos = formulario.elements;
+
+        for (var i = 0; i < campos.length; i++) 
+		{
+            if (campos[i].value === "") {
+                campos[i].classList.add("error");
+            } else {
+                campos[i].classList.remove("error");
+            }
+            
+            
+        }
+        var camposVacios = formulario.getElementsByClassName("error");
+        if (camposVacios.length > 0) {
+            alert("Hay campos vacíos");
+        } else {
+            alert("Formulario relleno correctamente");
+        }
+        }
+    function comprobacion() 
+        {
+            var email = document.getElementById("email").value;
+            var pos = email.indexOf("@");
+            if (pos === -1) {
+                alert("Correo INCORRECTO");
+            }
+        }
+    function numeros() {
+        var caracteres=document.getElementById("ss1").value;
+        if(caracteres.length==7){
+        
+        }else{
+            alert("El primer recuadro debe constar de 7 números")
+        }
+        
+        var caracteres2=document.getElementById("ss2").value;
+        if(caracteres2.length==2){
+        
+        }else{
+            alert("El segundo recuadro debe constar de 2 números")
+        }
+
+    }
+    </script>
+</head>
+<body>
+    <span id="tit">Solicitud del Informe de Vida Laboral</span>
+    <div id="cuadro">
+        <form id="formulario">
+            <div id="cuadro1">
+            <p>Nombre:</p>
+            <p>Primer Apellido:</p>
+            <p>Segundo Apellido:</p>
+            <p>Correo Electrónico:</p>
+            <p> Numero de afiliado a la S.S.:</p>
+            </div>
+            <div id="cuadro2">
+                <input type="text" id="nombre"><br>
+                <input type="text" id="apellido1"><br>
+                <input type="text" id="apellido2"><br>
+                <input type="text" id="email"><br>
+                <select name="ciudad1" id="ciudad"><option value="A CORUÑA">A CORUÑA</option></select>
+            </div>
+            <div id="cuadro3">
+                /<input type="text" id="ss1">/<input type="text" id="ss2">            </div>
+        </form>
+    </div>
+    <a href="" id="enviar" onclick="campos(),comprobacion(),numeros()">Eviar</a> <a href="./Ejercicio4.html" id="borrar" onclick="">Borrar</a>
+
+    
+    
+</body>
+</html>

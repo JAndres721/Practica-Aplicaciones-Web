@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+    <link href="./css/css3.css" rel="Stylesheet" type="text/css" media="screen"/>
+    <script>
+    function corregir() {
+        var total1=0;
+        var total2=0;
+        var total3=0;
+        var total=0;
+
+        if(document.getElementById('c1').checked){
+            document.getElementById('ca').innerHTML=" Correcto";
+            document.getElementById('ca').style.color="green";
+            document.getElementById('uno').innerHTML="";
+            total1=2;
+        }else{
+            total1=0;
+            document.getElementById('uno').innerHTML=" La respuesta correcta es c. Ballena"
+            document.getElementById('uno').style.color="Red";
+            document.getElementById('ca').innerHTML=""
+        }
+        if(document.getElementById('b2').checked){
+            document.getElementById('bb').innerHTML=" Correcto";
+            document.getElementById('bb').style.color="green";
+            document.getElementById('dos').innerHTML="";
+            total2=2;
+        }else{
+            total2=0;
+            document.getElementById('dos').innerHTML=" La respuesta correcta es b. Araña"
+            document.getElementById('dos').style.color="Red";
+            document.getElementById('bb').innerHTML="";
+        }
+        if(document.getElementById('d3').checked){
+            document.getElementById('dc').innerHTML=" Correcto";
+            document.getElementById('dc').style.color="green";
+            document.getElementById('tres').innerHTML="";
+            total3=2;
+        }else{
+            total3=0;
+            document.getElementById('tres').innerHTML=" La respuesta correcta es d. Canguro"
+            document.getElementById('tres').style.color="Red";
+            document.getElementById('dc').innerHTML=""
+        }
+        if(document.getElementById('a4').checked){
+            document.getElementById('ad').innerHTML=" Correcto";
+            document.getElementById('ad').style.color="green";
+            document.getElementById('cuatro').innerHTML="";
+            total4=2;
+        }else{
+            total4=0;
+            document.getElementById('cuatro').innerHTML=" La respuesta correcta es a. Cerdo"
+            document.getElementById('cuatro').style.color="Red";
+            document.getElementById('ad').innerHTML="";
+        }
+        if(document.getElementById('c5').checked){
+            document.getElementById('ce').innerHTML=" Correcto";
+            document.getElementById('ce').style.color="green";
+            document.getElementById('cinco').innerHTML="";
+            total5=2;
+        }else{
+            total5=0;
+            document.getElementById('cinco').innerHTML=" La respuesta correcta es c. Mariposa"
+            document.getElementById('cinco').style.color="Red";
+            document.getElementById('ce').innerHTML="";
+        }
+        total=total1+total2+total3+total4+total5;
+       document.getElementById('tot').innerHTML='Tu nota es un '+total+'';
+       /*alert('Tu nota es un '+total+'');*/
+    }
+    </script>
+</head>
+<body>
+    <div>
+        ¿Qué animal es un mamífero?<br>
+        Seleccione una:<br>
+        <input type="radio" name="pregunta" id="a1" value="0">a. Anguila<span id="aa"></span><br>
+        <input type="radio" name="pregunta" id="b1" value="0">b. Buitre<span id="ba"></span><br>
+        <input type="radio" name="pregunta" id="c1" value="3.33">c. Ballena<span id="ca"></span><br>
+        <input type="radio" name="pregunta" id="d1" value="0">d. Gallina<span id="da"></span><br>
+        <span id="uno"></span>
+    </div>
+    <div>
+        ¿Qué animal es un artropodo?<br>
+        Seleccione una:<br>
+        <input type="radio" name="pregunta2" id="a2" value="0">a. Anguila<span id="ab"></span><br>
+        <input type="radio" name="pregunta2" id="b2" value="3.33">b. Araña<span id="bb"></span><br>
+        <input type="radio" name="pregunta2" id="c2" value="0">c. Delfin<span id="cb"></span><br>
+        <input type="radio" name="pregunta2" id="d2" value="0">d. Abeja<span id="db"></span><br>
+        <span id="dos"></span>
+    </div>
+    <div>
+        ¿Qué animal es un marsupial?<br>
+        Seleccione una:<br>
+        <input type="radio" name="pregunta3" id="a3" value="0">a. Oso<span id="ac"></span><br>
+        <input type="radio" name="pregunta3" id="b3" value="0">b. León<span id="bc"></span><br>
+        <input type="radio" name="pregunta3" id="c3" value="0">c. Delfin<span id="cc"></span><br>
+        <input type="radio" name="pregunta3" id="d3" value="3.33">d. Canguro<span id="dc"></span><br>
+        <span id="tres"></span>
+    </div>
+    <div>
+        ¿Qué animal es omnivoro?<br>
+        Seleccione una:<br>
+        <input type="radio" name="pregunta4" id="a4" value="3.33">a. Cerdo<span id="ad"></span><br>
+        <input type="radio" name="pregunta4" id="b4" value="0">b. Gato<span id="bd"></span><br>
+        <input type="radio" name="pregunta4" id="c4" value="0">c. Jirafa<span id="cd"></span><br>
+        <input type="radio" name="pregunta4" id="d4" value="0">d. Elefante<span id="dd"></span><br>
+        <span id="cuatro"></span>
+    </div>
+    <div>
+        ¿Cuál de los siguientes animales es un insecto?<br>
+        Seleccione una:<br>
+        <input type="radio" name="pregunta5" id="a5" value="0">a. Serpiente<span id="ae"></span><br>
+        <input type="radio" name="pregunta5" id="b5" value="0">b. Pinüino<span id="be"></span><br>
+        <input type="radio" name="pregunta5" id="c5" value="3.33">c. Mariposa<span id="ce"></span><br>
+        <input type="radio" name="pregunta5" id="d5" value="0">d. Tortuga<span id="de"></span><br>
+        <span id="cinco"></span>
+    </div>
+    <input type="button" value="Corregir" onclick="corregir()"><span id="tot"></span>
+
+</body>
+</html>

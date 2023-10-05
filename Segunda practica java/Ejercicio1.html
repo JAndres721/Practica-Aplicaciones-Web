@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio1</title>
+    <link href="./css/css.css" rel="Stylesheet" type="text/css" media="screen"/>
+    <script>
+        function pulsar1() {
+            var nuevo=prompt("Introduzca un texto")
+            document.getElementById('cuadro').innerHTML=nuevo;
+        }
+        function pulsar2() {
+            var color=prompt("Introduzca un color");
+            var cambio=document.getElementById('cuadro');
+            cambio.style.backgroundColor=color;
+        }
+        function pulsar3() {
+            var formato=prompt("Introduzca un tipo de letra");
+            var color1=prompt("Dime un color para el texto");
+            document.getElementById('cuadro').style.fontFamily=formato;
+            document.getElementById('cuadro').style.color=color1;
+        }
+    </script>
+</head>
+<body>
+    <div id="cuadro">
+        Este es el contenido del div1
+    </div>
+    <input type="button" id="texto" value="Cambiar texto" onclick="pulsar1()"><br>
+    <input type="button" id="fondo" value="Cambiar color de fondo" onclick="pulsar2()"><br>
+    <input type="button" id="tipo" value="Cambiar tipo y color de letra" onclick="pulsar3()"><br>
+</body>
+</html>
